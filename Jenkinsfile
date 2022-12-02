@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('vcs') {
             steps {
-                git branch: 'main'
+                git branch: 'main',
                 url: "https://github.com/tejachennuru1/docker-jenkin.git'
             }
         }
