@@ -14,7 +14,8 @@ pipeline {
                 sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
                 sh 'sh get-docker.sh'
                 sh 'sudo usermod -aG docker ubuntu'
-                sh 'sudo reboot'
+                sh 'sudo systemctl enable docker.service'
+                sh 'sudo systemctl start docker'
                 sh 'docker info'
             }
         }
