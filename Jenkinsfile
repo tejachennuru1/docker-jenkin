@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
                 sh 'sh get-docker.sh'
-                sh 'sudo usermode -aG docker ubuntu'
+                sh 'sudo usermod -aG docker ubuntu'
                 sh 'sudo reboot'
                 sh 'docker info'
             }
