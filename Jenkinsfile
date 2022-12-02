@@ -15,7 +15,7 @@ pipeline {
                 sh 'sudo usermod -aG docker ubuntu'
                 sh 'sudo systemctl enable docker.service'
                 sh 'sudo systemctl start docker'
-                sh 'sudo chown jenkins:jenkins /var/run/docker.sock'
+                sh 'sudo chown ubuntu:ubuntu /var/run/docker.sock'
                 sh 'docker info'
 
 
