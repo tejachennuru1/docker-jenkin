@@ -11,11 +11,10 @@ pipeline {
     stage('build code') {
         steps {
             sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-            sh 'get-docker.sh && docker info'
+            sh 'get-docker'.sh
             sh 'sudo usermode -aG docker ubuntu'
-            sh 'sudo reboot'"""
-
-        }
+            sh 'sudo reboot'
+            sh 'docker info'
+            }
     }
-
 }
