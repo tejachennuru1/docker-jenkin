@@ -1,8 +1,7 @@
 pipeline {
-    agent { label 'dockernode' }
+    agent { label 'nodejenkins' }
     stages {
         stage('vcs') {
-
             steps {
                 git branch: 'main',
                     url: 'https://github.com/tejachennuru1/docker-jenkin.git'
@@ -19,4 +18,5 @@ pipeline {
                 sh 'docker info'
             }
         }
-}  }
+    }
+}
