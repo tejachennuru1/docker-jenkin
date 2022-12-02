@@ -1,0 +1,11 @@
+pipeline {
+    agent { label 'dockernode' }
+    stages {
+        stage ('vcs') {
+            steps {
+                git url: "https://github.com/tejachennuru1/docker-jenkin.git',
+                    branch: 'main'
+            }
+        }
+    }
+}

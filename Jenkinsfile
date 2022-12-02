@@ -2,20 +2,20 @@ pipeline {
     agent { label 'dockernode' }
     stages {
         stage('vcs') {
+
             steps {
                 git branch: 'main',
-                url: "https://github.com/tejachennuru1/docker-jenkin.git'
+                    url: 'https://github.com/tejachennuru1/docker-jenkin.git'
             }
         }
-    }
 
-    stage('build code') {
-        steps {
-            sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-            sh 'get-docker'.sh
-            sh 'sudo usermode -aG docker ubuntu'
-            sh 'sudo reboot'
-            sh 'docker info'
+        stage('build code') {
+            steps {
+                sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
+                sh 'get-docker.sh'
+                sh 'sudo usermode -aG docker ubuntu'
+                sh 'sudo reboot'
+                sh 'docker info'
             }
-    }
-}
+        }
+}  }
