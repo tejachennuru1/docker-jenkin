@@ -1,0 +1,17 @@
+pipeline {
+    agent { label 'nodejenkins' }
+    stages {
+        stage('vcs') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/tejachennuru1/docker-jenkin.git'
+            }
+        }
+
+        stage('build code') {
+            steps {
+                sh 'docker image build -t springpet:1.0 .'
+            }
+        }
+    }
+}

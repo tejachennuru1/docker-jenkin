@@ -17,6 +17,7 @@ pipeline {
                 sh 'sudo systemctl start docker'
                 sh 'sudo chown ubuntu:ubuntu /var/run/docker.sock'
                 sh 'docker info'
+                sh 'docker image build -t sppp:1.0 .'
 
 
 
