@@ -1,4 +1,4 @@
-FROM maven:3.8.6-openjdk-11
+FROM maven:3.8.6-ibm-semeru-11-focal
 RUN git clone https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic && mvn clean package && mkdir /demo
 LABEL project=spring
