@@ -6,4 +6,4 @@ LABEL author="teja"
 EXPOSE 8080
 RUN cp spring-petclinic/target/spring-petclinic-2.7.3.jar /demo
 WORKDIR /demo
-CMD ["java", "-jar", "spring-petclinic-2.7.3.jar"]
+CMD ["java", "-jar", "spring-petclinic-2.7.3.jar"],,
